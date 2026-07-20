@@ -22,6 +22,16 @@ window.ONAM_CONFIG = {
     eventName: "Onam Celebrations 2026",
     eventTagline: "A community celebration of harvest, culture & togetherness",
 
+    // Short one-liner used for the page <meta name="description"> and
+    // social share previews (WhatsApp/Facebook/Twitter). Keep it generic —
+    // do NOT put the community/builder name here, since these tags are
+    // public and get indexed/shared widely.
+    // NOTE: social link-preview crawlers (WhatsApp, etc.) don't run
+    // JavaScript, so this value must ALSO be kept in sync manually in the
+    // static <head> meta tags in index.html — this field is not enough
+    // on its own for link previews, only for the live browser tab.
+    description: "Join us for our community Onam celebrations 2026 — festivities, food, and fun for everyone!",
+
     // PLACEHOLDER — human-readable date range shown in the hero section
     dateDisplay: "September 13, 2026",
 

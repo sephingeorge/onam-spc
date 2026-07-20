@@ -34,7 +34,15 @@
     setText("eventDateLabel", "📅 " + event.dateDisplay);
     setText("eventVenueLabel", "📍 " + event.venue);
     setText("footerCommunityName", event.communityName);
-    document.title = event.eventName + " | " + event.communityName;
+
+    // Keep the live browser tab in sync with config.js. Note: this alone
+    // does NOT fix social link previews (WhatsApp etc. don't run JS) — the
+    // static tags in index.html's <head> are what those actually read.
+    document.title = event.eventName;
+    if (event.description) {
+      const metaDescription = document.getElementById("metaDescription");
+      if (metaDescription) metaDescription.setAttribute("content", event.description);
+    }
   }
 
   // ---------------- SCHEDULE ----------------
