@@ -206,13 +206,6 @@
     const emailEl = document.getElementById("contactEmail");
     emailEl.textContent = contact.email;
     emailEl.href = "mailto:" + contact.email;
-
-    const phoneEl = document.getElementById("contactPhone");
-    phoneEl.textContent = contact.phone;
-    phoneEl.href = "tel:" + contact.phone.replace(/\s+/g, "");
-
-    const waEl = document.getElementById("contactWhatsapp");
-    waEl.href = contact.whatsappLink || "#";
   }
 
   // ---------------- COUNTDOWN ----------------

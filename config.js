@@ -116,12 +116,11 @@ window.ONAM_CONFIG = {
 
   // ---------------------------------------------------------------------
   // CONTACT
-  // Use a generic committee email/phone — NOT a personal number.
+  // Only an email address is shown on the site (no phone number) — use a
+  // generic committee inbox, NOT a personal address.
   // ---------------------------------------------------------------------
   contact: {
     committeeName: "Onam Celebrations Organizing Committee",
     email: "onam.committee@onamatspc.in",     // PLACEHOLDER
-    phone: "+91 98765 43210",                  // PLACEHOLDER — shared/committee number
-    whatsappLink: "https://wa.me/919876543210", // PLACEHOLDER
   },
 };

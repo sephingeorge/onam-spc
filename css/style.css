@@ -253,14 +253,16 @@ img { max-width: 100%; display: block; }
   text-align: center;
   font-size: 2rem;
   color: var(--color-maroon);
-  margin: 0 0 0.5rem;
+  margin: 0 auto 0.5rem;
+  max-width: var(--max-width);
   font-weight: 800;
 }
 
 .section-subtitle {
   text-align: center;
   color: var(--color-text-light);
-  margin: 0 0 2.5rem;
+  margin: 0 auto 2.5rem;
+  max-width: var(--max-width);
 }
 
 .section-subtitle code {
@@ -523,28 +525,36 @@ img { max-width: 100%; display: block; }
 
 /* ---------------- CONTACT ---------------- */
 .contact-card {
-  max-width: 480px;
+  max-width: 420px;
   margin: 0 auto;
   background: #fff;
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   box-shadow: var(--shadow-soft);
   text-align: center;
 }
 
-.contact-card p { margin: 0.5rem 0; }
-
-.contact-card a { text-decoration: none; color: var(--color-maroon); font-weight: 600; }
-
-.whatsapp-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background: #25d366;
-  color: #fff !important;
-  padding: 0.65rem 1.5rem;
-  border-radius: 999px;
+.contact-committee {
+  margin: 0 0 0.75rem;
   font-weight: 700;
+  color: var(--color-text);
 }
+
+.contact-email {
+  display: inline-block;
+  max-width: 100%;
+  text-decoration: none;
+  color: var(--color-maroon);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0.6rem 1.25rem;
+  border: 2px solid var(--color-gold);
+  border-radius: 999px;
+  overflow-wrap: break-word;
+  transition: background 0.2s;
+}
+
+.contact-email:hover { background: var(--color-cream); }
 
 /* ---------------- FOOTER ---------------- */
 .site-footer {
