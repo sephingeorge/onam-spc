@@ -43,7 +43,7 @@
         <li><a href="#schedule">Program</a></li>
         <li><a href="#attractions">Attractions</a></li>
         <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#fund">Fund</a></li>
+        <li><a href="#onasadya">Onasadya</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -153,29 +153,31 @@
     </section>
 
     <!-- ============================================================
-         5. FUND COLLECTED
+         5. ONASADYA CONTRIBUTION
          ============================================================ -->
-    <section id="fund" class="section section-alt">
-      <h2 class="section-title">Community Fund</h2>
-      <p class="section-subtitle">
-        Every contribution helps make this celebration possible.<br />
-        <em>In the interest of privacy, individual names and contribution amounts are not published.</em>
-      </p>
-      <div class="fund-card">
-        <div class="fund-progress-track">
-          <div class="fund-progress-fill" id="fundProgressFill"></div>
+    <section id="onasadya" class="section section-alt">
+      <h2 class="section-title">Onasadya Contribution</h2>
+      <p class="section-subtitle">Per-person pricing for the Onam feast — see below</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <span class="pricing-label">Adults</span>
+          <span class="pricing-amount" id="priceAdult">₹0</span>
+          <span class="pricing-sub">per person</span>
         </div>
-        <div class="fund-numbers">
-          <div>
-            <span class="fund-amount" id="fundCollected">₹0</span>
-            <span class="fund-label">Collected</span>
-          </div>
-          <div>
-            <span class="fund-amount" id="fundTarget">₹0</span>
-            <span class="fund-label">Target</span>
-          </div>
+        <div class="pricing-card">
+          <span class="pricing-label">Kids</span>
+          <span class="pricing-amount" id="priceKid">₹0</span>
+          <span class="pricing-sub">per child</span>
         </div>
-        <p class="fund-percent" id="fundPercent"></p>
+      </div>
+
+      <p class="onasadya-note" id="onasadyaNote"></p>
+      <p class="onasadya-transparency" id="onasadyaTransparency"></p>
+
+      <div class="onasadya-register">
+        <p class="onasadya-register-label" id="onasadyaRegisterLabel"><!-- PLACEHOLDER: finalize once registration process is decided --></p>
+        <a href="#" class="register-btn" id="onasadyaRegisterBtn">Register</a>
       </div>
     </section>
 

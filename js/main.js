@@ -18,7 +18,7 @@
     renderSchedule(cfg);
     renderAttractions(cfg);
     renderSponsors(cfg.sponsors);
-    renderFund(cfg.fund);
+    renderOnasadya(cfg.onasadya);
     renderContact(cfg.contact);
     initCountdown(cfg.event.countdownTarget);
     initNav();
@@ -179,23 +179,20 @@
     });
   }
 
-  // ---------------- FUND ----------------
-  function renderFund(fund) {
-    if (!fund) return;
-    const symbol = fund.currencySymbol || "₹";
-    const collected = Number(fund.collected) || 0;
-    const target = Number(fund.target) || 0;
-    const percent = target > 0 ? Math.min(100, Math.round((collected / target) * 100)) : 0;
+  // ---------------- ONASADYA CONTRIBUTION ----------------
+  function renderOnasadya(onasadya) {
+    if (!onasadya) return;
+    const symbol = onasadya.currencySymbol || "₹";
 
-    setText("fundCollected", symbol + collected.toLocaleString("en-IN"));
-    setText("fundTarget", symbol + target.toLocaleString("en-IN"));
-    setText("fundPercent", percent + "% of target reached");
+    setText("priceAdult", symbol + Number(onasadya.priceAdult || 0).toLocaleString("en-IN"));
+    setText("priceKid", symbol + Number(onasadya.priceKid || 0).toLocaleString("en-IN"));
+    setText("onasadyaNote", onasadya.note || "");
+    setText("onasadyaTransparency", onasadya.transparencyNote || "");
+    setText("onasadyaRegisterLabel", onasadya.registrationLabel || "");
 
-    const fill = document.getElementById("fundProgressFill");
-    // Animate on next tick so CSS transition applies
-    requestAnimationFrame(() => {
-      fill.style.width = percent + "%";
-    });
+    const registerBtn = document.getElementById("onasadyaRegisterBtn");
+    registerBtn.textContent = onasadya.registrationLinkText || "Register";
+    registerBtn.href = onasadya.registrationLink || "#contact";
   }
 
   // ---------------- CONTACT ----------------

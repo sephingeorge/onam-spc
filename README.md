@@ -11,7 +11,7 @@ GitHub Pages with a custom domain (`onamatspc.in`).
 
 ```
 onam-spc/
-├── index.html              # Single-page site (hero, schedule, attractions, sponsors, fund, contact)
+├── index.html              # Single-page site (hero, schedule, attractions, sponsors, Onasadya pricing, contact)
 ├── config.js                # ⭐ THE ONLY FILE YOU NEED TO EDIT EACH YEAR
 ├── CNAME                    # Custom domain mapping for GitHub Pages (onamatspc.in)
 ├── css/
@@ -43,10 +43,13 @@ year to year:
 - `sponsors` — array of `{ name, logo, tier, link }`. `tier` must be
   `"Gold"`, `"Silver"`, or `"Bronze"` to be grouped correctly. Drop sponsor
   logo image files into `assets/sponsors/` and point `logo` at the path.
-- `fund` — `collected` and `target` numbers only (no individual names/amounts
-  are ever shown, by design, for privacy).
-- `contact` — committee email/phone/WhatsApp link (use a shared/committee
-  contact, not a personal one).
+- `onasadya` — per-person Onasadya (feast) pricing: `priceAdult`, `priceKid`,
+  plus the clarification/transparency text and registration link shown in
+  that section. This is pricing info only — no collected total or progress
+  bar is shown on the site; actual contribution tracking is handled
+  separately in an internal Google Sheet.
+- `contact` — committee email only (use a shared/committee inbox, not a
+  personal one).
 
 Save the file, refresh the page (or push to GitHub) — no build step, no
 dependencies to install.
@@ -127,5 +130,7 @@ Then visit `http://localhost:8000`.
   previews.
 - The site is intentionally indexable by search engines (no `noindex`) and
   includes basic SEO/Open Graph meta tags in `index.html`.
-- The fund section deliberately shows only a total collected + target amount
-  — no individual contributor names or amounts, by design, for privacy.
+- The Onasadya section shows per-person pricing only — no collected total,
+  progress bar, or contributor names/amounts of any kind. Contribution
+  tracking is intentionally kept off the public site and managed internally
+  via a separate Google Sheet.

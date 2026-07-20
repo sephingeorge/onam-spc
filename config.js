@@ -105,13 +105,28 @@ window.ONAM_CONFIG = {
   ],
 
   // ---------------------------------------------------------------------
-  // FUND COLLECTION
-  // Intentionally shows ONLY a total + target — no individual names/amounts.
+  // ONASADYA CONTRIBUTION
+  // Per-person pricing for the Onasadya (feast) ONLY — this is not a
+  // general community fund. Other event costs (decorations, cultural
+  // programs, prizes, etc.) are covered via sponsorships/stalls, not
+  // resident collections. Collection tracking itself happens off-site in
+  // a private Google Sheet — this site intentionally does NOT show any
+  // collected total or progress bar.
   // ---------------------------------------------------------------------
-  fund: {
-    collected: 185000,   // PLACEHOLDER — total amount collected so far (INR)
-    target: 300000,      // PLACEHOLDER — fundraising target (INR)
+  onasadya: {
     currencySymbol: "₹",
+    priceAdult: 449,   // PLACEHOLDER — per-adult Onasadya price
+    priceKid: 249,     // PLACEHOLDER — per-child Onasadya price
+
+    note: "This contribution covers your Onasadya (feast) participation only.",
+    transparencyNote: "Other event expenses — decorations, cultural programs, prizes, and more — are covered through sponsorships and stall contributions, not resident collections.",
+
+    // PLACEHOLDER — registration process isn't finalized yet. Once it is,
+    // update registrationLink (and text if needed) — e.g. point it at a
+    // Google Form instead of the contact section.
+    registrationLabel: "How to register",
+    registrationLinkText: "Contact the Organizing Committee",
+    registrationLink: "#contact",
   },
 
   // ---------------------------------------------------------------------

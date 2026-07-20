@@ -469,59 +469,89 @@ img { max-width: 100%; display: block; }
   color: var(--color-text-light);
 }
 
-/* ---------------- FUND ---------------- */
-.fund-card {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: var(--shadow-soft);
-  text-align: center;
-}
-
-.fund-progress-track {
-  background: #eee2c4;
-  border-radius: 999px;
-  height: 22px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.fund-progress-fill {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, var(--color-green), var(--color-gold));
-  border-radius: 999px;
-  transition: width 1s ease-out;
-}
-
-.fund-numbers {
+/* ---------------- ONASADYA CONTRIBUTION ---------------- */
+.pricing-grid {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.fund-amount {
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--color-maroon);
+.pricing-card {
+  background: #fff;
+  border: 3px solid var(--color-gold);
+  border-radius: var(--radius);
+  padding: 1.75rem 2.5rem;
+  min-width: 180px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
 }
 
-.fund-label {
+.pricing-label {
   display: block;
-  font-size: 0.85rem;
-  color: var(--color-text-light);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  color: var(--color-maroon);
+  margin-bottom: 0.5rem;
 }
 
-.fund-percent {
+.pricing-amount {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 800;
   color: var(--color-green-dark);
-  font-weight: 600;
-  margin: 0;
+  font-variant-numeric: tabular-nums;
 }
+
+.pricing-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-top: 0.25rem;
+}
+
+.onasadya-note,
+.onasadya-transparency {
+  max-width: 600px;
+  margin: 0 auto 0.75rem;
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.onasadya-transparency {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.onasadya-register {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.onasadya-register-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-light);
+  margin: 0 0 0.6rem;
+}
+
+.register-btn {
+  display: inline-block;
+  background: var(--color-maroon);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.7rem 1.75rem;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+
+.register-btn:hover { background: var(--color-maroon-light); }
 
 /* ---------------- CONTACT ---------------- */
 .contact-card {
