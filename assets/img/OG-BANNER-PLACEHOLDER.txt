@@ -1,0 +1,10 @@
+PLACEHOLDER — Open Graph banner image needed here.
+
+index.html references: assets/img/og-banner.png
+Recommended size: 1200x630px (standard OG image size for WhatsApp/Facebook link previews).
+
+Add a festive Onam-themed banner image (e.g. pookalam photo, event poster) named
+"og-banner.png" in this folder, then delete this text file.
+
+Until this file is added, WhatsApp/social link previews will show no image
+(the rest of the site works fine without it).
