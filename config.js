@@ -18,31 +18,39 @@ window.ONAM_CONFIG = {
   // ---------------------------------------------------------------------
   event: {
     // PLACEHOLDER — replace with your actual community name
-    communityName: "Sunrise Palm County",
+    communityName: "Sattva Park Cubix",
     eventName: "Onam Celebrations 2026",
     eventTagline: "A community celebration of harvest, culture & togetherness",
 
     // PLACEHOLDER — human-readable date range shown in the hero section
-    dateDisplay: "September 12–13, 2026",
+    dateDisplay: "September 13, 2026",
 
     // PLACEHOLDER — venue text shown under the date
-    venue: "Community Clubhouse Lawns, Sunrise Palm County",
+    venue: "Clubhouse Party Hall, Sattva Park Cubix",
 
     // Countdown target — ISO 8601 date-time string, local time.
     // Format: "YYYY-MM-DDTHH:MM:SS"
     // PLACEHOLDER — set this to the exact start date/time of your event
-    countdownTarget: "2026-09-12T09:00:00",
+    countdownTarget: "2026-09-13T09:00:00",
   },
 
   // ---------------------------------------------------------------------
   // PROGRAM SCHEDULE
-  // Add/remove/edit entries freely. Grouped by "day" label.
+  // Set scheduleReady to false to show a polished "Coming Soon" placeholder
+  // instead of the list below (e.g. while details are still being finalized).
+  // Flip it to true once `schedule` is filled in with the real program —
+  // no other changes needed, the site will switch views automatically.
   // ---------------------------------------------------------------------
+  scheduleReady: false,
+  scheduleComingSoonMessage: "Program details will be announced soon — stay tuned!",
+
+  // Add/remove/edit entries freely. Grouped by "day" label. This data is
+  // only shown once scheduleReady (above) is set to true.
   schedule: [
     {
-      day: "Day 1 — Saturday, Sep 12",
+      day: "Day 1 — Sunday, Sep 13",
       items: [
-        { time: "7:00 AM – 9:00 AM", title: "Pookalam Competition", description: "Flower rangoli competition — family & kids categories. Bring your own flowers or use community-provided stock." },
+        { time: "9:00 AM – 9:30 AM", title: "Pookalam Competition", description: "Flower rangoli competition — family & kids categories. Bring your own flowers or use community-provided stock." },
         { time: "9:30 AM – 10:30 AM", title: "Onam Kodi Distribution", description: "Traditional attire photo booth & Onakkodi (new clothes) blessing ceremony." },
         { time: "11:00 AM – 12:30 PM", title: "Tug of War & Kids' Games", description: "Fun games for all age groups — sack race, musical chairs, tug of war." },
         { time: "1:00 PM – 2:30 PM", title: "Onasadya (Grand Feast)", description: "Traditional 20+ dish sadya served on banana leaf. Multiple seating slots — check with volunteers." },
@@ -63,8 +71,15 @@ window.ONAM_CONFIG = {
 
   // ---------------------------------------------------------------------
   // MAIN ATTRACTIONS
-  // Short highlight cards — icon is any emoji or short text glyph.
+  // Set attractionsReady to false to show a polished "Coming Soon" placeholder
+  // instead of the cards below. Flip it to true once `attractions` is filled
+  // in with the real highlights — no other changes needed.
   // ---------------------------------------------------------------------
+  attractionsReady: false,
+  attractionsComingSoonMessage: "Exciting attractions will be revealed soon — stay tuned!",
+
+  // Short highlight cards — icon is any emoji or short text glyph. This data
+  // is only shown once attractionsReady (above) is set to true.
   attractions: [
     { icon: "🌼", title: "Pookalam Competition", description: "Intricate flower-rangoli designs by families across the community — judged on creativity and tradition." },
     { icon: "🍛", title: "Grand Onasadya", description: "Authentic 20+ course vegetarian feast served on banana leaves, prepared by community volunteers." },

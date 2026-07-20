@@ -15,8 +15,8 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     renderHero(cfg.event);
-    renderSchedule(cfg.schedule);
-    renderAttractions(cfg.attractions);
+    renderSchedule(cfg);
+    renderAttractions(cfg);
     renderSponsors(cfg.sponsors);
     renderFund(cfg.fund);
     renderContact(cfg.contact);
@@ -38,11 +38,19 @@
   }
 
   // ---------------- SCHEDULE ----------------
-  function renderSchedule(schedule) {
+  function renderSchedule(cfg) {
     const container = document.getElementById("scheduleContainer");
     container.innerHTML = "";
 
-    (schedule || []).forEach((day) => {
+    const subtitle = document.getElementById("scheduleSubtitle");
+    if (!cfg.scheduleReady) {
+      if (subtitle) subtitle.hidden = true;
+      container.appendChild(buildComingSoon(cfg.scheduleComingSoonMessage, "calendar"));
+      return;
+    }
+    if (subtitle) subtitle.hidden = false;
+
+    (cfg.schedule || []).forEach((day) => {
       const dayEl = document.createElement("div");
       dayEl.className = "schedule-day";
 
@@ -68,11 +76,19 @@
   }
 
   // ---------------- ATTRACTIONS ----------------
-  function renderAttractions(attractions) {
+  function renderAttractions(cfg) {
     const container = document.getElementById("attractionsContainer");
     container.innerHTML = "";
 
-    (attractions || []).forEach((a) => {
+    const subtitle = document.getElementById("attractionsSubtitle");
+    if (!cfg.attractionsReady) {
+      if (subtitle) subtitle.hidden = true;
+      container.appendChild(buildComingSoon(cfg.attractionsComingSoonMessage, "sparkle"));
+      return;
+    }
+    if (subtitle) subtitle.hidden = false;
+
+    (cfg.attractions || []).forEach((a) => {
       const card = document.createElement("div");
       card.className = "attraction-card";
       card.innerHTML = `
@@ -82,6 +98,38 @@
       `;
       container.appendChild(card);
     });
+  }
+
+  // ---------------- COMING SOON ----------------
+  const COMING_SOON_ICONS = {
+    calendar: `
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="coming-soon-icon-svg" aria-hidden="true">
+        <rect x="12" y="18" width="56" height="50" rx="8" fill="#fff8e7" stroke="#1f7a3f" stroke-width="3"/>
+        <rect x="12" y="18" width="56" height="16" rx="8" fill="#8b1e1e" opacity="0.12"/>
+        <line x1="12" y1="34" x2="68" y2="34" stroke="#8b1e1e" stroke-width="3"/>
+        <line x1="26" y1="10" x2="26" y2="24" stroke="#145229" stroke-width="4" stroke-linecap="round"/>
+        <line x1="54" y1="10" x2="54" y2="24" stroke="#145229" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="40" cy="51" r="9" fill="#f6c445"/>
+        <text x="40" y="55" font-size="13" font-weight="700" text-anchor="middle" fill="#8b1e1e">?</text>
+      </svg>`,
+    sparkle: `
+      <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" class="coming-soon-icon-svg" aria-hidden="true">
+        <path d="M40 8 L46 34 L72 40 L46 46 L40 72 L34 46 L8 40 L34 34 Z" fill="#f6c445" stroke="#8b1e1e" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="63" cy="17" r="5" fill="#1f7a3f" opacity="0.85"/>
+        <circle cx="15" cy="63" r="4" fill="#1f7a3f" opacity="0.65"/>
+      </svg>`,
+  };
+
+  function buildComingSoon(message, icon) {
+    const wrap = document.createElement("div");
+    wrap.className = "coming-soon";
+    wrap.innerHTML = `
+      ${COMING_SOON_ICONS[icon] || COMING_SOON_ICONS.calendar}
+      <span class="coming-soon-badge">Coming Soon</span>
+      <p class="coming-soon-message">${escapeHtml(message || "Details will be announced soon — stay tuned!")}</p>
+      <div class="coming-soon-dots"><span></span><span></span><span></span></div>
+    `;
+    return wrap;
   }
 
   // ---------------- SPONSORS ----------------

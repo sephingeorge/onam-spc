@@ -269,6 +269,72 @@ img { max-width: 100%; display: block; }
   border-radius: 4px;
 }
 
+/* ---------------- COMING SOON ---------------- */
+.coming-soon {
+  max-width: 460px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  border: 2px dashed var(--color-gold);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.coming-soon-icon-svg {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 1rem;
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  background: var(--color-gold);
+  color: var(--color-maroon);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.coming-soon-message {
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+  margin: 0 0 1.5rem;
+}
+
+.coming-soon-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.coming-soon-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-maroon-light);
+  animation: coming-soon-pulse 1.4s infinite ease-in-out both;
+}
+
+.coming-soon-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+  background: var(--color-gold-dark);
+}
+
+.coming-soon-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+  background: var(--color-green);
+}
+
+@keyframes coming-soon-pulse {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
 /* ---------------- SCHEDULE ---------------- */
 .schedule-day {
   margin-bottom: 2.5rem;
