@@ -385,6 +385,15 @@ img { max-width: 100%; display: block; }
 }
 
 /* ---------------- ATTRACTIONS ---------------- */
+.attractions-banner {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
 .attractions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -434,9 +443,15 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1.25rem;
 }
 
+.sponsor-tier.mega h3 { color: var(--color-maroon); font-size: 1.3rem; }
 .sponsor-tier.gold h3 { color: var(--color-gold-dark); }
 .sponsor-tier.silver h3 { color: #8a8a8a; }
-.sponsor-tier.bronze h3 { color: #a0622d; }
+
+.sponsor-tier.mega .sponsor-logo-card {
+  width: 220px;
+  height: 140px;
+  border: 2px solid var(--color-gold);
+}
 
 .sponsor-logos {
   display: flex;

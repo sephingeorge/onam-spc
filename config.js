@@ -51,30 +51,22 @@ window.ONAM_CONFIG = {
   // Flip it to true once `schedule` is filled in with the real program —
   // no other changes needed, the site will switch views automatically.
   // ---------------------------------------------------------------------
-  scheduleReady: false,
+  scheduleReady: true,
   scheduleComingSoonMessage: "Program details will be announced soon — stay tuned!",
 
   // Add/remove/edit entries freely. Grouped by "day" label. This data is
   // only shown once scheduleReady (above) is set to true.
   schedule: [
     {
-      day: "Day 1 — Sunday, Sep 13",
+      day: "Sunday, Sep 13",
       items: [
-        { time: "9:00 AM – 9:30 AM", title: "Pookalam Competition", description: "Flower rangoli competition — family & kids categories. Bring your own flowers or use community-provided stock." },
-        { time: "9:30 AM – 10:30 AM", title: "Onam Kodi Distribution", description: "Traditional attire photo booth & Onakkodi (new clothes) blessing ceremony." },
-        { time: "11:00 AM – 12:30 PM", title: "Tug of War & Kids' Games", description: "Fun games for all age groups — sack race, musical chairs, tug of war." },
-        { time: "1:00 PM – 2:30 PM", title: "Onasadya (Grand Feast)", description: "Traditional 20+ dish sadya served on banana leaf. Multiple seating slots — check with volunteers." },
-        { time: "5:00 PM – 6:00 PM", title: "Thiruvathira Practice Session", description: "Open practice session for the evening's group dance performance." },
-      ],
-    },
-    {
-      day: "Day 2 — Sunday, Sep 13",
-      items: [
-        { time: "6:00 PM – 6:30 PM", title: "Lighting of the Nilavilakku", description: "Traditional lamp-lighting ceremony to formally open cultural evening." },
-        { time: "6:30 PM – 7:15 PM", title: "Thiruvathira Dance", description: "Group performance by community women's association." },
-        { time: "7:15 PM – 8:00 PM", title: "Kids' Cultural Program", description: "Dance, song, and skit performances by children of the community." },
-        { time: "8:00 PM – 8:30 PM", title: "Pulikali (Tiger Dance)", description: "Guest performance troupe — vibrant body-painted folk dance." },
-        { time: "8:30 PM – 9:30 PM", title: "Prize Distribution & Vote of Thanks", description: "Winners of Pookalam & games felicitated; closing remarks by organizing committee." },
+        { time: "9:30 AM", title: "Inauguration" },
+        { time: "10:00 AM", title: "Panchari Melam & Onam Procession" },
+        { time: "11:00 AM", title: "Thiruvathira Dance (outside clubhouse)" },
+        { time: "11:20 AM", title: "Cultural Programs" },
+        // NOTE: original time given was "12:30 AM", corrected to PM since
+        // it follows the 11:20 AM slot — verify before publishing.
+        { time: "12:30 PM", title: "Sadya & Games" },
       ],
     },
   ],
@@ -87,6 +79,13 @@ window.ONAM_CONFIG = {
   // ---------------------------------------------------------------------
   attractionsReady: false,
   attractionsComingSoonMessage: "Exciting attractions will be revealed soon — stay tuned!",
+
+  // Optional banner image shown at the top of this section regardless of
+  // attractionsReady — set src to "" (empty string) to hide it entirely.
+  attractionsImage: {
+    src: "assets/main_attraction.jpg",
+    alt: "Collage of Onam celebration moments — pookalam, tug of war, Thiruvathira dance, elephant procession, and Onasadya feast",
+  },
 
   // Short highlight cards — icon is any emoji or short text glyph. This data
   // is only shown once attractionsReady (above) is set to true.
@@ -101,17 +100,15 @@ window.ONAM_CONFIG = {
 
   // ---------------------------------------------------------------------
   // SPONSORS
-  // tier: "Gold" | "Silver" | "Bronze" (grouping is automatic)
+  // tier: "Mega" | "Gold" | "Silver" (grouping is automatic, shown in that
+  // order). No Bronze tier this year.
   // logo: path relative to site root, e.g. "assets/sponsors/logo1.png"
+  // link: sponsor's website — PLACEHOLDER "#" until an actual URL is provided
   // ---------------------------------------------------------------------
   sponsors: [
-    // PLACEHOLDER sponsors — replace name/logo/link, or remove entirely if none yet
-    { name: "Green Leaf Supermarket", logo: "assets/sponsors/placeholder-gold.svg", tier: "Gold", link: "#" },
-    { name: "Kerala Spice Kitchen", logo: "assets/sponsors/placeholder-gold.svg", tier: "Gold", link: "#" },
-    { name: "Palm County Pharmacy", logo: "assets/sponsors/placeholder-silver.svg", tier: "Silver", link: "#" },
-    { name: "Sunrise Electricals", logo: "assets/sponsors/placeholder-silver.svg", tier: "Silver", link: "#" },
-    { name: "City Bakers", logo: "assets/sponsors/placeholder-bronze.svg", tier: "Bronze", link: "#" },
-    { name: "Fresh Flowers Co.", logo: "assets/sponsors/placeholder-bronze.svg", tier: "Bronze", link: "#" },
+    { name: "Bellanova", logo: "assets/sponsors/Gold.jpeg", tier: "Gold", link: "#" },
+    { name: "Pastry Mania", logo: "assets/sponsors/Silver_1.png", tier: "Silver", link: "#" },
+    { name: "El Nido", logo: "assets/sponsors/Silver_2.png", tier: "Silver", link: "#" },
   ],
 
   // ---------------------------------------------------------------------
@@ -125,8 +122,8 @@ window.ONAM_CONFIG = {
   // ---------------------------------------------------------------------
   onasadya: {
     currencySymbol: "₹",
-    priceAdult: 449,   // PLACEHOLDER — per-adult Onasadya price
-    priceKid: 249,     // PLACEHOLDER — per-child Onasadya price
+    priceAdult: 550,   // per-adult Onasadya price
+    priceKid: 250,     // per-child Onasadya price
 
     note: "This contribution covers your Onasadya (feast) participation only.",
     transparencyNote: "Other event expenses — decorations, cultural programs, prizes, and more — are covered through sponsorships and stall contributions, not resident collections.",

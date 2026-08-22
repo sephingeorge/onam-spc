@@ -20,9 +20,7 @@ onam-spc/
 │   └── main.js              # Renders config.js data into the page + countdown timer logic
 ├── assets/
 │   ├── sponsors/            # Sponsor logo images (referenced from config.js)
-│   │   ├── placeholder-gold.svg
-│   │   ├── placeholder-silver.svg
-│   │   └── placeholder-bronze.svg
+│   ├── main_attraction.jpg  # Banner image shown at the top of the Main Attractions section
 │   └── img/
 │       └── OG-BANNER-PLACEHOLDER.txt   # Add a real og-banner.png here (1200x630) for link previews
 ├── .gitignore
@@ -39,10 +37,12 @@ year to year:
   `YYYY-MM-DDTHH:MM:SS`).
 - `schedule` — array of days, each with a list of `{ time, title, description }`
   program items.
-- `attractions` — highlight cards `{ icon, title, description }`.
+- `attractions` — highlight cards `{ icon, title, description }`, plus an
+  optional `attractionsImage` banner (`{ src, alt }`) shown above them.
 - `sponsors` — array of `{ name, logo, tier, link }`. `tier` must be
-  `"Gold"`, `"Silver"`, or `"Bronze"` to be grouped correctly. Drop sponsor
-  logo image files into `assets/sponsors/` and point `logo` at the path.
+  `"Mega"`, `"Gold"`, or `"Silver"` to be grouped correctly (no Bronze tier
+  this year). Drop sponsor logo image files into `assets/sponsors/` and
+  point `logo` at the path.
 - `onasadya` — per-person Onasadya (feast) pricing: `priceAdult`, `priceKid`,
   plus the clarification/transparency text and registration link shown in
   that section. This is pricing info only — no collected total or progress
