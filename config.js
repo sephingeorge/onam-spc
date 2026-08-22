@@ -77,7 +77,7 @@ window.ONAM_CONFIG = {
   // instead of the cards below. Flip it to true once `attractions` is filled
   // in with the real highlights — no other changes needed.
   // ---------------------------------------------------------------------
-  attractionsReady: false,
+  attractionsReady: true,
   attractionsComingSoonMessage: "Exciting attractions will be revealed soon — stay tuned!",
 
   // Optional banner image shown at the top of this section regardless of
@@ -90,12 +90,11 @@ window.ONAM_CONFIG = {
   // Short highlight cards — icon is any emoji or short text glyph. This data
   // is only shown once attractionsReady (above) is set to true.
   attractions: [
-    { icon: "🌼", title: "Pookalam Competition", description: "Intricate flower-rangoli designs by families across the community — judged on creativity and tradition." },
-    { icon: "🍛", title: "Grand Onasadya", description: "Authentic 20+ course vegetarian feast served on banana leaves, prepared by community volunteers." },
-    { icon: "💃", title: "Thiruvathira & Folk Dances", description: "Traditional Kerala group dance performances by our residents, plus a guest Pulikali troupe." },
-    { icon: "🎭", title: "Kids' Cultural Program", description: "Songs, dances, and skits performed by the children of our community." },
-    { icon: "🏆", title: "Onam Games & Sports", description: "Tug of war, sack race, musical chairs and more — fun for every age group." },
-    { icon: "🪔", title: "Traditional Attire Walk", description: "A festive showcase of Kerala's traditional Onam attire — Kasavu sarees and mundus." },
+    { icon: "🥁", title: "Panchari Melam & Onam Procession", description: "A vibrant traditional percussion ensemble leads the community procession to kick off the celebrations." },
+    { icon: "💃", title: "Thiruvathira Dance", description: "Traditional Kerala group dance performed outside the clubhouse — a graceful highlight of the cultural evening." },
+    { icon: "🎭", title: "Cultural Programs", description: "Performances, music, and skits by residents celebrating the spirit of Onam." },
+    { icon: "🍛", title: "Onasadya (Grand Feast)", description: "A traditional vegetarian feast served on banana leaf, the heart of any Onam celebration." },
+    { icon: "🏆", title: "Onam Games", description: "Fun games and friendly competition for residents of all ages." },
   ],
 
   // ---------------------------------------------------------------------
