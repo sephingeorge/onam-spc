@@ -385,15 +385,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* ---------------- ATTRACTIONS ---------------- */
-.attractions-banner {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-}
-
 .attractions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

@@ -88,16 +88,6 @@
     const container = document.getElementById("attractionsContainer");
     container.innerHTML = "";
 
-    const banner = document.getElementById("attractionsBanner");
-    const image = cfg.attractionsImage;
-    if (image && image.src) {
-      banner.src = image.src;
-      banner.alt = image.alt || "";
-      banner.hidden = false;
-    } else {
-      banner.hidden = true;
-    }
-
     const subtitle = document.getElementById("attractionsSubtitle");
     if (!cfg.attractionsReady) {
       if (subtitle) subtitle.hidden = true;

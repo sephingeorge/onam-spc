@@ -80,13 +80,6 @@ window.ONAM_CONFIG = {
   attractionsReady: true,
   attractionsComingSoonMessage: "Exciting attractions will be revealed soon — stay tuned!",
 
-  // Optional banner image shown at the top of this section regardless of
-  // attractionsReady — set src to "" (empty string) to hide it entirely.
-  attractionsImage: {
-    src: "assets/main_attraction.jpg",
-    alt: "Collage of Onam celebration moments — pookalam, tug of war, Thiruvathira dance, elephant procession, and Onasadya feast",
-  },
-
   // Short highlight cards — icon is any emoji or short text glyph. This data
   // is only shown once attractionsReady (above) is set to true.
   attractions: [
