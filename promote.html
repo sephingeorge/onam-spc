@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onam 2026 – Other Ways to Promote Your Brand | Sattva Park Cubix</title>
+<link rel="icon" href="data:,">
+<style>
+  /* Palette matches css/style.css / sponsorship.html exactly (same Kerala
+     gold/green/maroon theme as the rest of the site).
+     --deep drives headings and the intro/CTA backgrounds — set to maroon
+     (not green) because that's the color the home page actually uses for
+     those roles (nav bar, .section-title, .register-btn). */
+  :root {
+    --gold:     #f6c445;
+    --gold-lt:  #fbdb85;
+    --deep:     #8b1e1e;
+    --green-dark: #145229;
+    --maroon:       #8b1e1e;
+    --maroon-light: #c0392b;
+    --cream:    #fff8e7;
+    --rust:     #c0392b;
+    --green:    #1f7a3f;
+    --muted:    #6b5a45;
+    --white:    #FFFFFF;
+    --radius: 14px;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', 'Trebuchet MS', -apple-system, sans-serif;
+    background: var(--cream);
+    color: #3a2b1a;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── HEADER / NAV — matches .site-header / .navbar on the main site ── */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(90deg, var(--maroon), var(--maroon-light));
+    box-shadow: var(--shadow-soft);
+  }
+
+  .navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .nav-brand {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  .download-btn {
+    background: var(--gold);
+    color: var(--maroon);
+    border: none;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .download-btn:hover { background: var(--gold-lt); }
+
+  /* ── PAGE INTRO ── */
+  /* Light cream, matching the home page's actual hero treatment — the
+     header's maroon gradient already reads as "dark section"; stacking a
+     second dark maroon band directly under it read as too heavy/flat. */
+  .intro {
+    background: radial-gradient(circle at top, #fffaf0 0%, var(--cream) 60%);
+    color: #3a2b1a;
+    padding: 48px 48px 40px;
+    text-align: center;
+  }
+
+  .intro-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--maroon);
+    margin-bottom: 14px;
+  }
+
+  .intro h1 {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.15;
+    max-width: 640px;
+    margin: 0 auto 14px;
+    color: var(--green-dark);
+  }
+
+  .intro p {
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  .intro-back {
+    display: inline-block;
+    margin-top: 22px;
+    color: var(--maroon);
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139,30,30,0.4);
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    padding: 56px 48px;
+  }
+
+  .section + .section {
+    border-top: 1px solid rgba(26,42,26,0.10);
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .section h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--deep);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .section p {
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 12px;
+  }
+
+  .option-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .option-card {
+    background: var(--white);
+    border: 1px solid rgba(200,146,42,0.2);
+    border-radius: 12px;
+    padding: 22px 20px;
+  }
+
+  .option-card.pricing {
+    background: rgba(200,146,42,0.07);
+    border: 1px solid rgba(200,146,42,0.25);
+  }
+
+  .option-card-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .option-card-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--deep);
+    margin-bottom: 8px;
+  }
+
+  .option-card-note {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .benefits-list li {
+    font-size: 13.5px;
+    color: #3a2b1a;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .benefits-list li::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 10px;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+
+  /* ── FLYER AD-ONLY CARD ── */
+  .ad-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0;
+    margin-top: 24px;
+    border: 1px solid rgba(200,146,42,0.25);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 560px;
+  }
+
+  .ad-card-visual {
+    padding: 24px;
+    background: #fdf6e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border-right: 1px solid rgba(200,146,42,0.15);
+  }
+
+  .ad-card-mock {
+    position: relative;
+    width: 74px;
+    height: 105px;
+    border: 2px solid rgba(200,146,42,0.35);
+    border-radius: 3px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .ad-card-mock .fill {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 6px);
+    height: calc(50% - 6px);
+    background: rgba(200,146,42,0.22);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  .ad-card-mock .other {
+    position: absolute;
+    background: rgba(26,42,26,0.05);
+    border-radius: 2px;
+  }
+
+  .ad-card-mock .other.top { top: 4px; left: 4px; right: 4px; height: calc(50% - 6px); }
+  .ad-card-mock .other.br  { bottom: 4px; right: 4px; width: calc(50% - 6px); height: calc(50% - 6px); }
+
+  .ad-card-caption {
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .ad-card-body {
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .ad-card-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .ad-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--deep);
+  }
+
+  .ad-card-detail {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .ad-card-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--rust);
+    margin-top: 4px;
+  }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    background: rgba(200,146,42,0.08);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin-top: 28px;
+    font-size: 13.5px;
+    color: var(--muted);
+    max-width: 640px;
+  }
+
+  .note-box strong { color: var(--deep); }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-light) 100%);
+    color: var(--cream);
+    padding: 56px 48px;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold-lt);
+    margin-bottom: 12px;
+  }
+
+  .cta-section p {
+    color: rgba(253,246,233,0.65);
+    margin-bottom: 30px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contact-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(200,146,42,0.3);
+    border-radius: 12px;
+    padding: 24px 32px;
+    min-width: 200px;
+  }
+
+  .contact-card .role {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+
+  .contact-card .name {
+    font-size: 18px;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+
+  .contact-card .detail {
+    font-size: 13px;
+    color: rgba(253,246,233,0.55);
+  }
+
+  @media print {
+    @page { size: A4; margin: 12mm 0 8mm 0; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    button { display: none !important; }
+    .site-header { display: none !important; }
+    body { font-size: 11px; }
+    .intro { padding: 24px 36px 20px; }
+    .intro h1 { font-size: 24px; }
+    .intro p { font-size: 11px; }
+    .section { padding: 16px 36px; }
+    .section h2 { font-size: 17px; margin-bottom: 6px; }
+    .section p { font-size: 10.5px; margin-bottom: 5px; }
+    .option-grid { gap: 6px; margin-top: 10px; }
+    .option-card { padding: 10px 10px; break-inside: avoid; page-break-inside: avoid; }
+    .benefits-list li { font-size: 9.5px; }
+    .ad-card { break-inside: avoid; page-break-inside: avoid; margin-top: 12px; }
+    .cta-section { padding: 24px 40px; break-inside: avoid; page-break-inside: avoid; }
+    .cta-section h2 { font-size: 20px; margin-bottom: 8px; }
+    .cta-section p { font-size: 10.5px; margin-bottom: 16px; }
+    .contact-cards { gap: 10px; }
+    .contact-card { padding: 12px 16px; min-width: 140px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">← Onam Celebrations 2026</a>
+    <button onclick="window.print()" class="download-btn">⬇ Download PDF</button>
+  </nav>
+</header>
+
+<div class="intro">
+  <div class="intro-label">Sponsorship Opportunity · Onam 2026</div>
+  <h1>Other Ways to Promote Your Brand</h1>
+  <p>Not ready for a full sponsorship tier? Here are three lower-commitment ways to get your brand in front of 600+ families at Onam 2026.</p>
+  <a href="sponsorship.html" class="intro-back">← Back to the full Sponsorship Kit</a>
+</div>
+
+<!-- STALL PARTNER -->
+<div class="section" style="background:#fff;">
+  <div class="section-label">Separate Offering</div>
+  <h2>🛖 Stall Partner</h2>
+  <p>Set up your own branded stall at the Onam celebration and engage directly with residents and guests. Stall space is a standalone offering — pricing is based on the space required and will be discussed and finalized on a case-by-case basis.</p>
+  <div class="option-grid">
+    <div class="option-card">
+      <div class="option-card-label">What you get</div>
+      <ul class="benefits-list">
+        <li>Dedicated stall space at the venue</li>
+        <li>Direct access to residents across 600+ flats</li>
+        <li>Freedom to display, demo, or sell your product / service</li>
+      </ul>
+    </div>
+    <div class="option-card">
+      <div class="option-card-label">Ideal for</div>
+      <ul class="benefits-list">
+        <li>Local businesses wanting live product engagement</li>
+        <li>Food &amp; beverage brands, lifestyle products, services</li>
+        <li>Brands looking for direct resident interaction</li>
+      </ul>
+    </div>
+    <div class="option-card pricing">
+      <div class="option-card-label">Pricing</div>
+      <div class="option-card-price">On Discussion</div>
+      <div class="option-card-note">Pricing varies based on stall size and space required. Reach out to discuss.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FLEX DISPLAY -->
+<div class="section">
+  <div class="section-label">Separate Offering</div>
+  <h2>🪧 Flex Display</h2>
+  <p>Want your brand's own standee displayed at the event? Bring your fully printed flex banner or standee — we place it at a spot close to the celebration area. No printing cost on our end.</p>
+  <div class="option-grid">
+    <div class="option-card">
+      <div class="option-card-label">What you get</div>
+      <ul class="benefits-list">
+        <li>Your own branded standee / flex banner displayed at the event</li>
+        <li>Placed at a visible spot near the celebration area</li>
+        <li>You provide the flex — fully printed and ready to display</li>
+      </ul>
+    </div>
+    <div class="option-card">
+      <div class="option-card-label">Good to know</div>
+      <ul class="benefits-list">
+        <li>Final placement decided by the event team based on space availability</li>
+        <li>Maximum one standee per brand unless multiple slots are booked</li>
+        <li>No competing brand standees placed adjacent to each other</li>
+      </ul>
+    </div>
+    <div class="option-card pricing">
+      <div class="option-card-label">Pricing</div>
+      <div class="option-card-price">On Discussion</div>
+      <div class="option-card-note">Pricing based on placement spot and duration. Reach out to discuss.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FLYER AD ONLY -->
+<div class="section" style="background:#fff;">
+  <div class="section-label">Budget Print Option</div>
+  <h2>📄 Flyer Ad-Only</h2>
+  <p>Not ready for a stall or standee either? You can still get your brand in front of all 600+ families with a dedicated ad space on the event flyer — no other commitments required.</p>
+
+  <div class="ad-card">
+    <div class="ad-card-visual">
+      <div class="ad-card-mock">
+        <div class="fill">Your Ad</div>
+        <div class="other top"></div>
+        <div class="other br"></div>
+      </div>
+      <div class="ad-card-caption">Quarter A5-size<br>50% W × 50% H</div>
+    </div>
+    <div class="ad-card-body">
+      <div class="ad-card-eyebrow">Quarter A5-size Ad Space</div>
+      <div class="ad-card-title">Flyer Ad-Only</div>
+      <div class="ad-card-detail">74 × 105 mm — 50% width × 50% height of A5</div>
+      <div class="ad-card-detail">Delivered to all 600+ occupied flats</div>
+      <ul class="benefits-list" style="margin-top:4px;">
+        <li>Ad space on the event flyer only</li>
+        <li>No flex banner, no MC mention</li>
+        <li>Great for local shops and small businesses</li>
+      </ul>
+      <div class="ad-card-price">₹2,500</div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Print Deadline for all ad creatives:</strong> Submit by <strong>August 30, 2026</strong>. Payment must be confirmed before artwork goes to print. Please share artwork in <strong>PDF or PNG format at 300 DPI</strong> minimum.
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Ready to Get Involved?</h2>
+  <p>Reach out to the committee to confirm a stall, flex display slot, or flyer ad space.</p>
+
+  <div class="contact-cards">
+    <div class="contact-card">
+      <div class="role">Organised by</div>
+      <div class="name" style="font-size:14px; line-height:1.3;">Kerala Community Members</div>
+      <div class="detail" style="margin-top:6px;">On behalf of</div>
+      <div class="detail" style="font-weight:600; color:rgba(240,201,107,0.9); margin-top:2px;">Park Cubix Apartment Owners Association (PCAOA)</div>
+      <div class="detail" style="margin-top:6px;">📍 Devanahalli, North Bangalore</div>
+    </div>
+    <div class="contact-card">
+      <div class="role">Get in Touch</div>
+      <div class="name">Sponsorship Team</div>
+      <div class="detail" style="margin-top:8px;">📞 +91 80750 87078</div>
+      <div class="detail">💬 WhatsApp preferred</div>
+    </div>
+  </div>
+
+  <p style="margin-top:36px; font-size:12px; color:rgba(253,246,233,0.35); letter-spacing:1px;">
+    PCAOA · SATTVA PARK CUBIX · ONAM 2026 · PROMOTION OPTIONS
+  </p>
+</div>
+
+</body>
+</html>

@@ -34,6 +34,23 @@ a { color: inherit; }
 
 img { max-width: 100%; display: block; }
 
+/* ---------------- SKIP LINK ---------------- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 200;
+  background: var(--color-gold);
+  color: var(--color-text);
+  font-weight: 700;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus { top: 0; }
+
 /* ---------------- NAVIGATION ---------------- */
 .site-header {
   position: sticky;
@@ -81,7 +98,11 @@ img { max-width: 100%; display: block; }
 .nav-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
@@ -95,7 +116,7 @@ img { max-width: 100%; display: block; }
   display: block;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .nav-toggle { display: flex; }
   .nav-links {
     position: absolute;
@@ -109,7 +130,9 @@ img { max-width: 100%; display: block; }
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
-  .nav-links.open { max-height: 300px; }
+  /* Comfortably fits the current 6 nav items (~325px) with headroom
+     for one or two more before this needs bumping again. */
+  .nav-links.open { max-height: 480px; }
   .nav-links li { border-top: 1px solid rgba(255,255,255,0.15); }
   .nav-links a { display: block; padding: 0.9rem 1.5rem; }
 }
@@ -435,13 +458,19 @@ img { max-width: 100%; display: block; }
 }
 
 .sponsor-tier.mega h3 { color: var(--color-maroon); font-size: 1.3rem; }
-.sponsor-tier.gold h3 { color: var(--color-gold-dark); }
-.sponsor-tier.silver h3 { color: #8a8a8a; }
+/* Darker than --color-gold-dark on purpose: the lighter gold fails WCAG AA
+   text contrast (~2.2:1) against the cream/white section backgrounds. */
+.sponsor-tier.gold h3 { color: #8a6900; }
+.sponsor-tier.silver h3 { color: #6e6e6e; }
 
 .sponsor-tier.mega .sponsor-logo-card {
-  width: 220px;
-  height: 140px;
+  width: 300px;
+  height: 190px;
   border: 2px solid var(--color-gold);
+}
+
+.sponsor-tier.mega .sponsor-logo-card img {
+  max-height: 130px;
 }
 
 .sponsor-logos {
@@ -454,25 +483,59 @@ img { max-width: 100%; display: block; }
 .sponsor-logo-card {
   background: #fff;
   border-radius: var(--radius);
-  padding: 1.25rem;
+  padding: 1.5rem;
   box-shadow: var(--shadow-soft);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 160px;
-  height: 100px;
+  width: 240px;
+  height: 150px;
   text-decoration: none;
 }
 
 .sponsor-logo-card img {
   max-width: 100%;
-  max-height: 60px;
+  max-height: 100px;
   object-fit: contain;
 }
 
 .sponsors-empty {
   text-align: center;
   color: var(--color-text-light);
+}
+
+.sponsor-promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 640px;
+  margin: 2.5rem auto 0;
+}
+
+.sponsor-promo-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  border-top: 4px solid var(--color-gold);
+}
+
+.sponsor-promo-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sponsor-promo-card h3 {
+  color: var(--color-green-dark);
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.sponsor-promo-card p {
+  color: var(--color-text-light);
+  font-size: 0.92rem;
+  margin: 0 0 1.25rem;
 }
 
 /* ---------------- ONASADYA CONTRIBUTION ---------------- */
@@ -576,7 +639,21 @@ img { max-width: 100%; display: block; }
   color: var(--color-text);
 }
 
-.contact-email {
+.contact-person {
+  margin: 0 0 1rem;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.contact-email,
+.contact-phone {
   display: inline-block;
   max-width: 100%;
   text-decoration: none;
@@ -590,7 +667,11 @@ img { max-width: 100%; display: block; }
   transition: background 0.2s;
 }
 
-.contact-email:hover { background: var(--color-cream); }
+.contact-email:hover,
+.contact-phone:hover { background: var(--color-cream); }
+
+.contact-email[hidden],
+.contact-phone[hidden] { display: none; }
 
 /* ---------------- FOOTER ---------------- */
 .site-footer {

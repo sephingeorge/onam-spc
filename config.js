@@ -130,11 +130,13 @@ window.ONAM_CONFIG = {
 
   // ---------------------------------------------------------------------
   // CONTACT
-  // Only an email address is shown on the site (no phone number) — use a
-  // generic committee inbox, NOT a personal address.
+  // personName/phone/email are all optional — leave any as "" to hide it
+  // on the site.
   // ---------------------------------------------------------------------
   contact: {
     committeeName: "Onam Celebrations Organizing Committee",
-    email: "onam.committee@onamatspc.in",     // PLACEHOLDER
+    personName: "Mahesh",
+    phone: "+918870503804",
+    email: "",
   },
 };

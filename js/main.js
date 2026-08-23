@@ -73,7 +73,7 @@
           <div class="schedule-time">${escapeHtml(item.time)}</div>
           <div class="schedule-details">
             <h4>${escapeHtml(item.title)}</h4>
-            <p>${escapeHtml(item.description || "")}</p>
+            ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
           </div>
         `;
         dayEl.appendChild(row);
@@ -208,9 +208,31 @@
     if (!contact) return;
     setText("contactCommittee", contact.committeeName);
 
+    const personEl = document.getElementById("contactPerson");
+    if (contact.personName) {
+      personEl.textContent = "Contact Person: " + contact.personName;
+      personEl.hidden = false;
+    } else {
+      personEl.hidden = true;
+    }
+
+    const phoneEl = document.getElementById("contactPhone");
+    if (contact.phone) {
+      phoneEl.textContent = "📞 " + contact.phone;
+      phoneEl.href = "tel:" + contact.phone;
+      phoneEl.hidden = false;
+    } else {
+      phoneEl.hidden = true;
+    }
+
     const emailEl = document.getElementById("contactEmail");
-    emailEl.textContent = contact.email;
-    emailEl.href = "mailto:" + contact.email;
+    if (contact.email) {
+      emailEl.textContent = contact.email;
+      emailEl.href = "mailto:" + contact.email;
+      emailEl.hidden = false;
+    } else {
+      emailEl.hidden = true;
+    }
   }
 
   // ---------------- COUNTDOWN ----------------

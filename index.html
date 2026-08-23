@@ -30,10 +30,36 @@
   <meta name="twitter:description" content="Join us for our community Onam celebrations 2026 — festivities, food, and fun for everyone!" />
   <meta name="twitter:image" content="https://onamatspc.in/assets/img/og-banner.png" />
 
+  <meta name="theme-color" content="#8b1e1e" />
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured data for Google rich results. NOTE: same caveat as the
+       OG/Twitter tags above — keep in sync with config.js (event) by hand,
+       since crawlers reading this don't execute JavaScript. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Onam Celebrations 2026",
+    "description": "Join us for our community Onam celebrations 2026 — festivities, food, and fun for everyone!",
+    "startDate": "2026-09-13T09:00:00+05:30",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Clubhouse Party Hall, Sattva Park Cubix",
+      "address": "Sattva Park Cubix, Devanahalli, North Bangalore"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Onam Celebrations Organizing Committee"
+    }
+  }
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ============================================================
        NAVIGATION
@@ -48,13 +74,14 @@
         <li><a href="#schedule">Program</a></li>
         <li><a href="#attractions">Attractions</a></li>
         <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="promote.html">Promote</a></li>
         <li><a href="#onasadya">Onasadya</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- ============================================================
          1. HERO SECTION
          ============================================================ -->
@@ -155,6 +182,20 @@
       <div id="sponsorsContainer" class="sponsors-container">
         <!-- Populated by js/main.js -->
       </div>
+      <div class="sponsor-promo-grid">
+        <div class="sponsor-promo-card">
+          <div class="sponsor-promo-icon">🎗️</div>
+          <h3>Become a Sponsor</h3>
+          <p>Explore our Mega, Gold &amp; Silver sponsorship tiers.</p>
+          <a href="sponsorship.html" class="register-btn">View Sponsorship Kit →</a>
+        </div>
+        <div class="sponsor-promo-card">
+          <div class="sponsor-promo-icon">📣</div>
+          <h3>Other Ways to Promote</h3>
+          <p>Stalls, flex banners &amp; flyer ads — no tier required.</p>
+          <a href="promote.html" class="register-btn">See Promotion Options →</a>
+        </div>
+      </div>
     </section>
 
     <!-- ============================================================
@@ -194,7 +235,11 @@
       <p class="section-subtitle">Questions, sponsorship offers, or volunteering? Reach out!</p>
       <div class="contact-card">
         <p class="contact-committee" id="contactCommittee">Organizing Committee</p>
-        <a class="contact-email" id="contactEmail" href="#">email@example.com</a>
+        <p class="contact-person" id="contactPerson" hidden></p>
+        <div class="contact-links">
+          <a class="contact-phone" id="contactPhone" href="#" hidden></a>
+          <a class="contact-email" id="contactEmail" href="#">email@example.com</a>
+        </div>
       </div>
     </section>
   </main>
