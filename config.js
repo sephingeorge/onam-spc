@@ -101,6 +101,7 @@ window.ONAM_CONFIG = {
     { name: "Bellanova", logo: "assets/sponsors/Gold.jpeg", tier: "Gold", link: "https://bellanovamoda.com/" },
     { name: "Pastry Mania", logo: "assets/sponsors/Silver_1.png", tier: "Silver", link: "https://www.instagram.com/pastrymania_devanahalli/" },
     { name: "El Nido", logo: "assets/sponsors/Silver_2.jpeg", tier: "Silver", link: "https://www.elnidoeduplay.com/" },
+    { name: "CRS Enterprises", logo: "assets/sponsors/Silver_3.jpeg", tier: "Silver", link: "" },
   ],
 
   // ---------------------------------------------------------------------
