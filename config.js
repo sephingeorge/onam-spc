@@ -107,8 +107,8 @@ window.ONAM_CONFIG = {
   // ONASADYA CONTRIBUTION
   // Per-person pricing for the Onasadya (feast) ONLY — this is not a
   // general community fund. Other event costs (decorations, cultural
-  // programs, prizes, etc.) are covered via sponsorships/stalls, not
-  // resident collections. Collection tracking itself happens off-site in
+  // programs, prizes, etc.) are covered via sponsorships/stalls and
+  // community support. Collection tracking itself happens off-site in
   // a private Google Sheet — this site intentionally does NOT show any
   // collected total or progress bar.
   // ---------------------------------------------------------------------
@@ -118,7 +118,7 @@ window.ONAM_CONFIG = {
     priceKid: 250,     // per-child Onasadya price
 
     note: "This contribution covers your Onasadya (feast) participation only.",
-    transparencyNote: "Other event expenses — decorations, cultural programs, prizes, and more — are covered through sponsorships and stall contributions, not resident collections.",
+    transparencyNote: "Other event expenses — decorations, cultural programs, prizes, and more — are covered through sponsorships, stall contributions, and community support.",
 
     // PLACEHOLDER — registration process isn't finalized yet. Once it is,
     // update registrationLink (and text if needed) — e.g. point it at a
